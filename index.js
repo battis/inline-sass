@@ -5,7 +5,12 @@ import { parse } from 'node-html-parser';
 import sass from 'sass';
 import inlineCSS from 'inline-css';
 
+const defaults = {
+    deleteTempDir: true
+};
+
 const inlineSass = async (path_or_html, options) => {
+    options = { ...defaults, ...options };
     let html = path_or_html;
     let dir =
         options.url.search(/^file:\/\//) === 0
@@ -60,7 +65,11 @@ const inlineSass = async (path_or_html, options) => {
         console.log(e);
     }
 
-    fs.rmdirSync(tmp, { recursive: true });
+    if (options.deleteTempDir) {
+        fs.rmdirSync(tmp, { recursive: true });
+    } else {
+        console.log(`Temp dir: ${tmp}`);
+    }
     return result;
 };
 
