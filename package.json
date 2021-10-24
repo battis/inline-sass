@@ -1,20 +1,24 @@
 {
-  "name": "inline-sass",
-  "version": "1.0.1",
-  "description": "",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "main": "index.js",
-  "author": {
-    "name": "Seth Battis",
-    "email": "seth@battis.net"
-  },
-  "license": "GPL-3.0",
-  "dependencies": {
-    "inline-css": "^3.0.0",
-    "node-html-parser": "^5.0.0",
-    "sass": "^1.43.2"
-  }
+    "name": "inline-sass",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "main": "index.js",
+    "author": {
+        "name": "Seth Battis",
+        "email": "seth@battis.net"
+    },
+    "license": "GPL-3.0",
+    "dependencies": {
+        "inline-css": "^3.0.0",
+        "node-html-parser": "^5.0.0",
+        "sass": "^1.43.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.1.0",
+        "prettier": "^2.4.1"
+    }
 }
