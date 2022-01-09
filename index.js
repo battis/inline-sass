@@ -66,7 +66,7 @@ const inlineSass = async (path_or_html, options) => {
     }
 
     if (options.deleteTempDir) {
-        fs.rmdirSync(tmp, { recursive: true });
+        fs.rmSync(tmp, { recursive: true });
     } else {
         console.log(`Temp dir: ${tmp}`);
     }
