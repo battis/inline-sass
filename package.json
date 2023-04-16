@@ -1,24 +1,32 @@
 {
-    "name": "inline-sass",
-    "version": "1.1.0",
-    "description": "",
-    "type": "module",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "main": "index.js",
-    "author": {
-        "name": "Seth Battis",
-        "email": "seth@battis.net"
-    },
-    "license": "GPL-3.0",
-    "dependencies": {
-        "inline-css": "^3.0.0",
-        "node-html-parser": "^5.0.0",
-        "sass": "^1.43.2"
-    },
-    "devDependencies": {
-        "eslint": "^8.1.0",
-        "prettier": "^2.4.1"
+  "name": "inline-sass",
+  "version": "1.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "author": {
+    "name": "Seth Battis",
+    "email": "seth@battis.net"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "inline-css": "^3.0.0",
+    "node-html-parser": "^5.4.2",
+    "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "@battis/eslint-config": "github:battis/eslint-config",
+    "@battis/prettier-config": "github:battis/prettier-config"
+  },
+  "prettier": "@battis/prettier-config",
+  "eslintConfig": {
+    "extends": "@battis/eslint-config",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 13
     }
+  }
 }
