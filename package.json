@@ -3,23 +3,23 @@
   "version": "1.1.0",
   "description": "",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "main": "index.js",
+  "main": "index.mjs",
   "author": {
     "name": "Seth Battis",
     "email": "seth@battis.net"
   },
   "license": "GPL-3.0",
+  "scripts": {
+    "release": "np --yolo --omit=dev"
+  },
   "dependencies": {
     "inline-css": "^3.0.0",
     "node-html-parser": "^5.4.2",
     "sass": "^1.62.0"
   },
   "devDependencies": {
-    "@battis/eslint-config": "github:battis/eslint-config",
-    "@battis/prettier-config": "github:battis/prettier-config"
+    "@battis/eslint-config": "latest",
+    "@battis/prettier-config": "latest"
   },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
