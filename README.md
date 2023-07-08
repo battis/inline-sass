@@ -1,6 +1,7 @@
 # Inline Sass
 
 [![npm version](https://badge.fury.io/js/inline-sass.svg)](https://badge.fury.io/js/inline-sass)
+[![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 Inline Sass stylesheets into HTML style attributes &mdash; useful in emails and other lo-fi HTML authoring situations.
 
@@ -35,7 +36,7 @@ _A thin wrapper for [inline-css](https://github.com/jonkemp/inline-css) and [Sas
 import inlineSass from 'inline-sass';
 
 inlineSass('/path/to/file.html')
-  .then(result => console.log(String(result)))
+  .then((result) => console.log(String(result)))
   .catch(console.error);
 ```
 
