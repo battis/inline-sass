@@ -9,6 +9,9 @@
     "email": "seth@battis.net"
   },
   "license": "GPL-3.0",
+  "engines": {
+    "node": ">=12.17"
+  },
   "scripts": {
     "release": "np --yolo --omit=dev"
   },
