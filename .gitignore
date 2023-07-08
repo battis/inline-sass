@@ -2,3 +2,4 @@
 /.nova/*
 !/.nova/Artwork
 !/.nova/Configuration.json
+/dist/
