@@ -3,7 +3,7 @@ import InlineCSS from 'inline-css';
 import { parse } from 'node-html-parser';
 import os from 'os';
 import path from 'path';
-import sass from 'sass';
+import * as sass from 'sass';
 
 type InlineSassOptions = InlineCSS.Options & {
   deleteTempDir?: boolean;

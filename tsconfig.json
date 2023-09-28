@@ -1,11 +1,7 @@
 {
+  "extends": "@battis/babel-config/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es6",
-    "moduleResolution": "node",
-    "declaration": true,
-    "sourceMap": true,
-    "esModuleInterop": true
+    "outDir": "dist/types"
   },
-  "include": ["./src"]
+  "include": ["src"]
 }
