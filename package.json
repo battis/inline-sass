@@ -20,32 +20,31 @@
   },
   "license": "GPL-3.0",
   "scripts": {
+    "clean": "del ./dist",
     "build": "run-s build:*",
-    "build:clean": "shx rm -rf dist",
+    "build:clean": "run-s clean",
     "build:commonjs": "babel src --extensions .ts --out-dir dist/cjs --source-maps --config-file @battis/babel-config/cjs.json",
     "build:esm": "babel src --extensions .ts --out-dir dist/esm --out-file-extension .mjs --source-maps --config-file @battis/babel-config/esm.json",
     "build:types": "tsc",
     "release": "run-s release:*",
-    "release:build": "npm run build",
-    "release:publish": "np --yolo --omit=dev"
-  },
+    "release:version": "commit-and-tag-version",
+    "release:build": "run-s build",
+    "release:publish": "pnpm publish -r --otp $(op item get npm --otp) --access public"
+    },
   "dependencies": {
-    "inline-css": "^4.0.2",
+    "inline-css": "^4.0.3",
     "node-html-parser": "^5.4.2",
-    "sass": "^1.63.6"
+    "sass": "^1.89.2"
   },
   "devDependencies": {
-    "@battis/babel-config": "file:../babel-config",
-    "@battis/eslint-config": "latest",
-    "@battis/prettier-config": "latest",
-    "@types/inline-css": "^3.0.1",
-    "@types/node": "^20.4.1",
-    "np": "^8.0.4",
-    "npm-run-all": "^4.1.2",
-    "shx": "^0.3.4"
-  },
-  "prettier": "@battis/prettier-config",
-  "eslintConfig": {
-    "extends": "@battis/eslint-config"
+    "@battis/babel-config": "^0.2.3",
+    "@battis/eslint-config": "^2.0.3",
+    "@battis/prettier-config": "^1.6.0",
+    "@types/inline-css": "^3.0.4",
+    "@types/node": "^24.0.1",
+    "commit-and-tag-version": "^12.5.1",
+    "del-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "5.7.3"
   }
 }

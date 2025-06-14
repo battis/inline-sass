@@ -1,4 +1,5 @@
 .*
 /bin/
+/esling.config.js
 /src/
 /tsconfig.*
